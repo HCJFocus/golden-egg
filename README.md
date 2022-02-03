@@ -1,1 +1,1 @@
-# golden-egg
+# golden-egg - учебный проект
