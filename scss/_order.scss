@@ -1,0 +1,126 @@
+.order{
+    padding: 100px 0 45px;
+}
+.order__container{
+    @include flex(space-between, center);
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.order__text{
+    width: 50%;
+    max-width: 565px;
+    text-align: center;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+.order-form{
+    @include flex(space-between, center);
+    input{
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background: $gray;
+        border: 1px solid transparent;
+        outline: none;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+        @media (max-width: 320px) {
+            width: 100%;
+        }
+        &::placeholder{
+            color: $gray-opacity;
+        }
+        &:focus{
+            border: 1px solid $yellow;
+        }
+    }
+    .order__select {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        position: relative;
+        @media (max-width: 320px) {
+            width: 100%;
+        }
+        &::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url(../img/select-arrow.svg) center no-repeat;
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 10px);
+            pointer-events: none;
+        }
+        select{
+            width: 100%;
+            background: $gray;
+            border: 1px solid transparent;
+            height: 60px;
+            padding: 0 20px;
+            font-size: 14px;
+            outline: none;
+            border-radius: 5px;
+            appearance: none;
+            &:not(:valid){
+                color: $gray-opacity;
+            }
+        }
+        option{
+            color: $color;
+        }
+    }
+    button{
+        width: 100%;
+        background: $yellow;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 5px;
+        height: 60px;
+        transition: 0.3s;
+        &:hover{
+            background: darken($yellow, 10%);
+        }
+    }
+}
+.order__img{
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    @media (max-width: 1024px) {
+        width: 45%;
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+    .circle{
+        right: 0;
+        transform: translate(40%, -50%);
+        @media (max-width: 1024px) {
+            transform: translate(-160%, -150%);
+        }
+    }
+    img{
+        @include img;
+    }
+}
+.order__contacts{
+    font-size: 12px;
+    color: $gray-opacity;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 45px;
+    @media (max-width: 425px) {
+        font-size: 10px;
+      }
+    a{
+        color: $gray-opacity;
+        font-weight: 700;
+    }
+}

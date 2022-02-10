@@ -1,0 +1,126 @@
+$kurale: 'Kurale', serif;
+$os: 'Open Sans', sans-serif;
+$white: #fff;
+$wrap: 1440px;
+$container: 1230px;
+$mc: 0 auto;
+$yellow: #e8c300;
+$gray: #e5e5e5;
+$tabs: #333;
+$tabs-opacity: rgba(51, 51, 51, 0.2);
+$color: #000000;
+$text: 18px;
+$white-opacity: rgba(255,255,255,0.5);
+$black-opacity: rgba(0,0,0,0.5);
+$gray-opacity: rgba(51, 51, 51, 0.5);
+
+@mixin flex($jc,$ai) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin line {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: $yellow;
+    border-radius: 50px;
+    margin: $mc;
+    padding-top: 10px;
+    margin-bottom: 35px;
+}
+@mixin img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 50px $black-opacity);
+    border-radius: 5px;
+}
+body{
+    background: $white;
+    font-family: $os;
+    color: $color;
+    font-size: $text;
+    margin: 0;
+    overflow-x: hidden;
+}
+.wrapper{
+    max-width: $wrap;
+    margin: $mc;
+}
+.container{
+    padding: 0 15px;
+    max-width: $container;
+    margin: $mc;
+    @media (max-width: 1024px) {
+        max-width: 970px;
+    }
+    @media (max-width: 768px) {
+        max-width: 730px;
+    }
+    @media (max-width: 425px) {
+        max-width: 390px;
+    }
+    @media (max-width: 375px) {
+        width: auto;
+    }
+}
+a{
+    text-decoration: none;
+}
+svg{
+    width: 100%;
+    height: 100%;
+}
+.circle{
+    width: 250px;
+    height: 250px;
+    border: 20px solid $yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    filter: drop-shadow(0px 0px 100px $black-opacity);
+}
+section h2{
+    font-size: 42px;
+    font-weight: 400;
+    font-family: $kurale;
+    text-transform: uppercase;
+    @media (max-width: 425px) {
+        font-size: 41px;
+    }
+    @media (max-width: 375px) {
+        font-size: 39px;
+    }
+    @media (max-width: 320px) {
+        font-size: 33px;
+    }
+    &::after{
+        @include line;
+    }
+}
+section p{
+    line-height: 175%;
+    margin-bottom: 25px;
+}
+.intro{
+    font-weight: 700;
+}
+@media (max-width: 1024px) {
+    .circle{
+        width: 200px;
+        height: 200px;
+    }
+    body{
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    .circle{
+        display: none;
+    }
+}
