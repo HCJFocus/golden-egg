@@ -27,6 +27,12 @@
         height: 60px;
         padding: 0 20px;
         font-size: 14px;
+        @media (max-width: 425px) {
+            width: 100%;
+        }
+        @media (max-width: 375px) {
+            width: 100%;
+        }
         @media (max-width: 360px) {
             width: 100%;
         }
@@ -44,6 +50,12 @@
         width: calc(50% - 5px);
         margin-bottom: 10px;
         position: relative;
+        @media (max-width: 425px) {
+            width: 100%;
+        }
+        @media (max-width: 375px) {
+            width: 100%;
+        }
         @media (max-width: 360px) {
             width: 100%;
         }
