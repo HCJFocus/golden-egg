@@ -3,6 +3,9 @@
 }
 .order__container{
     @include flex(space-between, center);
+    @media (max-width: 1200px) {
+        justify-content: center;
+    }
     @media (max-width: 768px) {
         flex-direction: column;
     }
@@ -11,6 +14,9 @@
     width: 50%;
     max-width: 565px;
     text-align: center;
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -111,6 +117,9 @@
     width: 50%;
     max-width: 500px;
     position: relative;
+    @media (max-width: 1200px) {
+        display: none;
+    }
     @media (max-width: 1024px) {
         width: 45%;
     }

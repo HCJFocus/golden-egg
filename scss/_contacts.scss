@@ -74,6 +74,9 @@
     @include flex(space-between, center);
     padding: 0 8px;
     width: 100%;
+    @media (max-width: 1200px) {
+        flex-wrap: nowrap;
+    }
     @media (max-width: 768px) {
         justify-content: center;
     }
@@ -101,6 +104,9 @@
 }
 .contacts__data{
     @include flex(flex-start, center);
+    @media (max-width: 1200px) {
+        gap: 10px;
+    }
     @media (max-width: 768px) {
         margin-bottom: 16px;
     }

@@ -53,6 +53,9 @@ body{
     padding: 0 15px;
     max-width: $container;
     margin: $mc;
+    @media (max-width: 1200px) {
+        max-width: 1000px;
+    }
     @media (max-width: 1024px) {
         max-width: 970px;
     }
